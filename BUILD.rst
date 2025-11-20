@@ -43,6 +43,13 @@ Follow the `Getting started with the Raspberry Pi Pico <https://datasheets.raspb
   chmod +x pico_setup.sh
   ./pico_setup.sh
 
+**NOTE**: pico-sdk versions 2.1.1 and 2.2.0 both use version 0.18.0 of
+the tinyusb library, and a bug in that version of tinyusb prevents the
+PicoRx firmware from running correctly. Use pico-sdk 2.1.0, or pico-sdk
+2.2.0 with the tinyusb submodule updated to version 0.19.0. If you choose
+not to install pico-sdk in your build environment, cmake will download
+a known-good version of pico-sdk into your build directory automatically.
+
 Build Project
 -------------
 
